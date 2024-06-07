@@ -51,20 +51,28 @@ function updateDisplayLine() {
 }
 
 document.getElementById("btnTinhTong").onclick = function (e) {
+  //input: items[]
+  //output: tổng:number
   let tong = 0;
+  //progress:
   for (let i in items) {
     tong += items[i];
   }
+  //in kết quả ra màn hình:
   document.getElementById("ketQua1").innerHTML = tong;
 };
 
 document.getElementById("btnDemSoDuong").onclick = function (e) {
+  //input: items[]
+  //output: đếm số dương: number
   let dem = 0;
+  //progress:
   for (let i in items) {
     if (items[i] > 0) {
       dem++;
     }
   }
+  //in kết quả ra màn hình
   document.getElementById("ketQua2").innerHTML = dem;
 };
 
@@ -82,11 +90,12 @@ document.getElementById("btnTimSoDuong").onclick = function (e) {
       soDuongMin = "không tìm thấy số dương trong mảng";
     }
   }
+  //in kết quả ra màn hình
   document.getElementById("ketQua3").innerHTML = soDuongMin;
 };
 
 document.getElementById("btnTimSoChan").onclick = function (e) {
-  //input: arr
+  //input: items[]
   //output: soChan
   let soChan = items[0];
   //progress:
@@ -95,10 +104,14 @@ document.getElementById("btnTimSoChan").onclick = function (e) {
       soChan = i;
     }
   }
+  //in kết quả ra màn hình
   document.getElementById("ketQua4").innerHTML = soChan;
 };
 document.getElementById("btnSapXep").onclick = function (e) {
+  //input: items[]
+  //output: items[]
   items.sort((a, b) => a - b);
+  //in kết quả ra màn hình
   document.getElementById("ketQua5").innerHTML = items;
 };
 
@@ -117,6 +130,7 @@ document.getElementById("btnTimSoNguyen").onclick = function (e) {
       break;
     }
   }
+  //in kết quả ra màn hình
   document.getElementById("ketQua6").innerHTML = soNT;
 };
 
